@@ -1,6 +1,6 @@
 # Complete Machine Learning and Data Science: Zero to Mastery
 
-Original repository was written by @chesterheng. I modified it for my personal use.
+Note: Original repository was written by @chesterheng. I modified it for my personal use.
 
 ## Table of Contents
 
