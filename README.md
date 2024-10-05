@@ -1,23 +1,27 @@
 # Complete Machine Learning and Data Science: Zero to Mastery
 
+Original repository was written by @chesterheng. I modified it for my personal use.
+
 ## Table of Contents
 
 - [Complete Machine Learning and Data Science: Zero to Mastery](#complete-machine-learning-and-data-science-zero-to-mastery-2020)
+
   - [Table of Contents](#table-of-contents)
   - [**Section 2: Machine Learning 101**](#section-2-machine-learning-101)
     <details>
     <summary>Click to view all steps</summary>
-    
+
     - [What Is Machine Learning?](#what-is-machine-learning)
     - [AI/Machine Learning/Data Science](#aimachine-learningdata-science)
     - [How Did We Get Here?](#how-did-we-get-here)
     - [Types of Machine Learning](#types-of-machine-learning)
     - [What Is Machine Learning? Round 2](#what-is-machine-learning-round-2)
     </details>
+
   - [**Section 3: Machine Learning and Data Science Framework**](#section-3-machine-learning-and-data-science-framework)
     <details>
     <summary>Click to view all steps</summary>
-    
+
     - [Introducing Our Framework](#introducing-our-framework)
     - [6 Step Machine Learning Framework](#6-step-machine-learning-framework)
     - [Types of Machine Learning Problems](#types-of-machine-learning-problems)
@@ -30,7 +34,8 @@
     - [Modelling Part 4 - Comparison](#modelling-part-4---comparison)
     - [Experimentation](#experimentation)
     - [Tools We Will Use](#tools-we-will-use)
-     </details>
+    </details>
+
   - [**Section 4: The 2 Paths**](#section-4-the-2-paths)
   - [**Section 5: Data Science Environment Setup**](#section-5-data-science-environment-setup)
     <details>
@@ -44,6 +49,7 @@
     - [Sharing your Conda Environment](#sharing-your-conda-environment)
     - [Jupyter Notebook Walkthrough](#jupyter-notebook-walkthrough)
     </details>
+
   - [**Section 6: Pandas: Data Analysis**](#section-6-pandas-data-analysis)
     <details>
     <summary>Click to view all steps</summary>
@@ -56,6 +62,7 @@
     - [Manipulating Data](#manipulating-data)
     - [Assignment: Pandas Practice](#assignment-pandas-practice)
     </details>
+
   - [**Section 7: NumPy**](#section-7-numpy)
     <details>
     <summary>Click to view all steps</summary>
@@ -76,6 +83,7 @@
     - [Turn Images Into NumPy Arrays](#turn-images-into-numpy-arrays)
     - [Optional: Extra NumPy resources](#optional-extra-numpy-resources)
     </details>
+
   - [**Section 8: Matplotlib: Plotting and Data Visualization**](#section-8-matplotlib-plotting-and-data-visualization)
     <details>
     <summary>Click to view all steps</summary>
@@ -90,6 +98,7 @@
     - [Plotting From Pandas DataFrames](#plotting-from-pandas-dataframes)
     - [Customizing Your Plots](#customizing-your-plots)
     </details>
+
   - [**Section 9: Scikit-learn: Creating Machine Learning Models**](#section-9-scikit-learn-creating-machine-learning-models)
     <details>
     <summary>Click to view all steps</summary>
@@ -131,6 +140,7 @@
     - [Saving And Loading A Model](#saving-and-loading-a-model)
     - [Putting It All Together](#putting-it-all-together)
     </details>
+
   - [**Section 10: Supervised Learning: Classification + Regression**](#section-10-supervised-learning-classification--regression)
   - [**Section 11: Milestone Project 1: Supervised Learning (Classification)**](#section-11-milestone-project-1-supervised-learning-classification)
     <details>
@@ -152,6 +162,7 @@
     - [Finding The Most Important Features](#finding-the-most-important-features)
     - [Reviewing The Project](#reviewing-the-project)
     </details>
+
   - [**Section 12: Milestone Project 2: Supervised Learning (Time Series Data)**](#section-12-milestone-project-2-supervised-learning-time-series-data)
     <details>
     <summary>Click to view all steps</summary>
@@ -174,6 +185,7 @@
     - [Making Predictions](#making-predictions)
     - [Feature Importance](#feature-importance)
     </details>
+
   - [**Section 13: Data Engineering**](#section-13-data-engineering)
     <details>
     <summary>Click to view all steps</summary>
@@ -188,6 +200,7 @@
     - [Apache Spark and Apache Flink](#apache-spark-and-apache-flink)
     - [Kafka and Stream Processing](#kafka-and-stream-processing)
     </details>
+
   - [**Section 14: Neural Networks: Deep Learning, Transfer Learning and TensorFlow 2**](#section-14-neural-networks-deep-learning-transfer-learning-and-tensorflow-2)
     <details>
     <summary>Click to view all steps</summary>
@@ -223,6 +236,7 @@
     - [Submitting Model to Kaggle](#submitting-model-to-kaggle)
     - [Making Predictions On Our Images](#making-predictions-on-our-images)
     </details>
+
   - [**Section 15: Storytelling + Communication: How To Present Your Work**](#section-15-storytelling--communication-how-to-present-your-work)
     <details>
     <summary>Click to view all steps</summary>
@@ -234,6 +248,7 @@
     - [Communicating With Outside World](#communicating-with-outside-world)
     - [Storytelling](#storytelling)
     </details>
+
   - [**Section 16: Career Advice + Extra Bits**](#section-16-career-advice--extra-bits)
   - [**Section 17: Learn Python**](#section-17-learn-python)
   - [**Section 18: Learn Python Part 2**](#section-18-learn-python-part-2)
@@ -4911,10 +4926,11 @@ model.summary()
 Callbacks are helper functions a model can use during training to do such things as save its progress, check its progress or stop training early if a model stops improving.
 
 To setup a TensorBoard callback, we need to do 3 things:
+
 - Load the TensorBoard notebook extension ✅
 - Create a TensorBoard callback which is able to save logs to a directory and pass it to our model's `fit()` function. ✅
 - Visualize our models training logs with the `%tensorboard` magic function (we'll do this after model training).
- 
+
 ```python
 # Load TensorBoard notebook extension
 %load_ext tensorboard
@@ -5076,7 +5092,7 @@ def plot_pred(prediction_probabilities, labels, images, n=1):
     color = "green"
   else:
     color = "red"
-  
+
   # Change plot title to be predicted, probability of prediction and truth label
   plt.title("{} {:2.0f}% {}".format(pred_label,
                                     np.max(pred_prob)*100,
@@ -5115,7 +5131,7 @@ def plot_pred_conf(prediction_probabilities, labels, n=1):
   plt.xticks(np.arange(len(top_10_pred_labels)),
              labels=top_10_pred_labels,
              rotation="vertical")
-  
+
   # Change color of true label
   if np.isin(true_label, top_10_pred_labels):
     top_plot[np.argmax(top_10_pred_labels == true_label)].set_color("green")
@@ -5176,7 +5192,7 @@ def load_model(model_path):
   Loads a saved model from a specified path.
   """
   print(f"Loading saved model from: {model_path}")
-  model = tf.keras.models.load_model(model_path, 
+  model = tf.keras.models.load_model(model_path,
                                      custom_objects={"KerasLayer":hub.KerasLayer})
   return model
 
@@ -5211,7 +5227,7 @@ full_model_tensorboard = create_tensorboard_callback()
 # No validation set when training on all the data, so we can't monitor validation accuracy
 full_model_early_stopping = tf.keras.callbacks.EarlyStopping(monitor="accuracy",
                                                              patience=3)
-                                                          
+
 # Fit the full model to the full data
 full_model.fit(x=full_data,
                epochs=NUM_EPOCHS,
@@ -5280,7 +5296,7 @@ preds_df.to_csv("drive/My Drive/Dog Vision/full_model_predictions_submission_1_m
 custom_path = "drive/My Drive/Dog Vision/my-dog-photos/"
 custom_image_paths = [custom_path + fname for fname in os.listdir(custom_path)]
 
-# Turn custom images into batch datasets 
+# Turn custom images into batch datasets
 custom_data = create_data_batches(custom_image_paths, test_data=True)
 custom_data
 
